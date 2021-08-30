@@ -1,0 +1,12 @@
+<h1>Todos</h1>
+<ul class='list-group'>
+    {{#each todoURL}}
+        <li class='list-group-item d-flex justify-content-between'>
+            <div>{{this.title}}</div>
+            <div class='links'>
+                <a href='/todos/{{this._id}}' class="btn btn-info">View</a>
+                <a href="https://google.com/?q={{this.titleEncoded}}" class="btn btn-info" >Google It</a>   
+            </div>
+        </li>
+    {{/each}}
+</ul>
